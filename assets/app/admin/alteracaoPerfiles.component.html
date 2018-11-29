@@ -1,0 +1,136 @@
+<div class="container" style="width:95%;">
+    <h2> Alteração do Perfil de Estudante </h2>
+    
+    
+    
+    <br>
+    <div class="form-group voffset row">
+        <label for="" class="vertical-label col-sm-4 col-md-8 text-right"> Select Aluno</label>
+        <div class="col-sm-8 col-md-4">
+            <select id="Id" #Id="ngModel" class="hideLabel form-control" [(ngModel)]="alunoId" name="Id" (change)="selectAluno();">
+                <option selected="" value=""></option>
+                <option [ngValue]="k" *ngFor="let k of numberUsers">
+                    {{k}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <br>
+    
+    
+    <div class="row">
+        <article class="panel panel-info">
+            <div class="panel-heading">
+                <label> E-mail </label>
+            </div>
+            <div class="panel-body">
+                <div class="col-12 col-md-8">
+                     {{user.email}}
+                </div>
+            </div>
+        </article>
+    </div>
+    <br>
+    <div class="row">
+        <article class="panel panel-info">
+            <div class="panel-heading">
+                <label> Nome </label>
+            </div>    
+            <div class="panel-body">
+                <div class="col-12 col-md-8">
+                    {{user.fullName}}
+                </div>
+                <div class="col-4 col-md-2">
+                    <a  (click)="editOnGoing('name')"> Edit </a>
+                </div>
+            </div>
+            <div class="panel-footer" *ngIf="editName">
+                <form [formGroup]="nameForm" (ngSubmit)="onSubmit('name')">
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" formControlName="name">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary" (click)="backEdit('email')">Back</button>
+                </form>
+            </div>
+        </article>
+    </div>
+    <br>
+    <div class="row">
+        <article class="panel panel-info">
+            <div class="panel-heading">
+                <label> Numero de Aluno </label>
+            </div>
+            <div class="panel-body">
+                <div class="col-12 col-md-8">
+                    {{user.userNumero}}
+                </div>
+                <div class="col-4 col-md-2">
+                    <a  (click)="editOnGoing('numero')"> Edit </a>
+                </div>
+            </div>
+            <div class="panel-footer" *ngIf="editNumero">
+                <form [formGroup]="numeroForm" (ngSubmit)="onSubmit('numero')">
+                    <div class="form-group">
+                        <input type="text" id="numero" class="form-control" formControlName="numero">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary" (click)="backEdit('email')">Back</button>
+                </form>
+            </div>
+        </article>
+    </div>
+    <br>
+    <div class="row">
+        <article class="panel panel-info">
+            <div class="panel-heading">
+                <label> Curso </label>
+            </div>
+            <div class="panel-body">
+                <div class="col-12 col-md-8">
+                    {{user.userCurso}}
+                </div>
+                <div class="col-4 col-md-2">
+                    <a  (click)="editOnGoing('curso')"> Edit </a>
+                </div>
+            </div>
+            <div class="panel-footer" *ngIf="editCurso">
+                <form [formGroup]="cursoForm" (ngSubmit)="onSubmit('curso')">
+                    <div class="form-group">
+                        <select name="curso" class="form-control" formControlName="curso">
+                            <option value="LEI">Licenciatura em Engenharia Informática</option>
+                            <option value="LTIC">Licenciatura em Tecnologias da Informação</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary" (click)="backEdit('email')">Back</button>
+                </form>
+            </div>
+        </article>
+    </div>
+    <br>
+    <div class="row">
+        <article class="panel panel-info">
+            <div class="panel-heading">
+                <label> Numero de Identificação Fiscal </label>
+            </div>
+            <div class="panel-body">
+                <div class="col-12 col-md-8">
+                    {{user.userNif}}
+                </div>
+                <div class="col-4 col-md-2">
+                    <a (click)="editOnGoing('nif')"> Edit </a>
+                </div>
+            </div>
+            <div class="panel-footer" *ngIf="editNif">
+                <form [formGroup]="nifForm" (ngSubmit)="onSubmit('nif')">
+                    <div class="form-group">
+                        <input type="text" id="nif" class="form-control" formControlName="nif">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary" (click)="backEdit('email')">Back</button>
+                </form>
+            </div>
+        </article>
+    </div>
+</div>

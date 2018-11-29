@@ -1,0 +1,167 @@
+<h1> Fatura </h1>
+<br>
+<div class="col-md-8 col-md-offset-2" *ngIf="!validado">
+    <h4>
+        <p> O aluno {{user.userNumero}} já está inscrito no presente ano-lectivo, mas a administração académica ainda não procedeu
+            à validação da mesma.</p>
+        <p>Faça F5 à página para saber se a matricula já foi validada.</p>
+        <p>Para mais informações : info@fc.ul.pt </p>
+    </h4>
+</div>
+<div *ngIf="validado">
+    <div class="container-fluid">
+            <div class="row" >
+                <div class="col-12 col-md-8">
+                <h3 highlight>Faculade de Ciências da Universidade de Lisboa</h3> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <h4>Data de emissão</h4>
+                </div>
+                <div class="col-10 col-md-8">
+                    {{date}}
+                </div>
+            </div>
+            <br>
+        <div class="well">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                        Morada
+                </div>
+                <div class="col-10 col-md-8">
+                    <p>Campo Grande</p>
+                    <p>1749-016</p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    NIF
+                </div>
+                <div class="col-10 col-md-8">
+                    502618418
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    Telefone
+                </div>
+                <div class="col-10 col-md-8">
+                    217500000
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    Email
+                </div>
+                <div class="col-10 col-md-8">
+                    info@ciencias.ulisboa.pt
+                </div>
+            </div>
+        </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <h4 highlight>Informação do Aluno</h4>
+                </div>
+                <div class="col-10 col-md-8">
+                </div>
+            </div>
+            <br>
+        <div class="well">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    Nome
+                </div>
+                <div class="col-10 col-md-8">
+                    {{user.fullName}}
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    Nº Aluno
+                </div>
+                <div class="col-10 col-md-8">
+                    {{user.userNumero}}
+                </div>
+            </div>
+        </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <h4 highlight>Entidade Pagadora</h4>
+                </div>
+                <div class="col-10 col-md-8">
+                </div>
+            </div>
+            <br>
+        <div class="well">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    Nome 
+                </div>
+                <div class="col-10 col-md-8">
+                    {{user.fullName}}
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    NIF
+                </div>
+                <div class="col-10 col-md-8">
+                    PT {{user.userNif}}
+                </div>
+            </div>
+        </div>    
+    </div>
+        <br>
+    <div class="container-fluid">
+            <h4 highlight>Itens Liquidados:</h4>
+            <div class="well well-lg">
+                <div class="row" >
+                    <div class="col-8 col-md-6">
+                        
+                    </div>
+                    <div class="col-2 col-md-2">
+                        <h5 highlight>Semestre</h5>
+                    </div>
+                    <div class="col-2 col-md-2">
+                        <h5 highlight>Ano</h5>
+                    </div>
+                </div>    
+                    <br>
+                    <div class="row" *ngFor="let unidade of unidades">    
+                        <div class="col-8 col-md-6">
+                            <p>{{unidade.nome}}</p>
+                        </div>
+                        <div class="col-2 col-md-2">
+                            <p>{{unidade.semestre}}º</p>
+                        </div>
+                        <div class="col-2 col-md-2">
+                            <p>{{unidade.ano}}º</p>
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <br>
+                <div class="row" >
+                    <div class="col-10 col-md-8">
+                        <h5 highlight>Total Recebido:</h5>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <p>1.085€</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

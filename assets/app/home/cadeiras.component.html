@@ -1,0 +1,16 @@
+<h1> Curriculo </h1>
+  <p> Escolha a cadeira para obter mais informações:</p>
+
+<div class="col-sm-8 col-md-4">
+  <select id="Id" #Id="ngModel" class="hideLabel form-control" [(ngModel)]="selectedCadeira">
+    <option [ngValue]="k" *ngFor="let k of cadeirasDoCurso">{{k.nome}}</option>
+  </select>
+<br>
+
+<p> Professor Regente:</p>
+<p>{{selectedCadeira.professor}}</p>
+<br>
+<p> Horario de Duvidas:</p>
+<p>{{selectedCadeira.duvidas}}</p>
+</div>
+

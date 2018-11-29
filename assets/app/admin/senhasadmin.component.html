@@ -1,0 +1,75 @@
+<h1> senhasadmin </h1>
+<div class="row">
+    <div class="col-8 col-md-4">
+     <div class="panel panel-info">
+            <div class="panel-heading" style="height:150%">
+                <p>Licenciatura: </p>
+            </div>
+            <div class="panel-body" style="text-align:center">
+                {{senhas.licenciatura}}
+            </div>
+            <div class="panel-footer">
+               <button class="btn btn-primary" (click)="incrementaSenha('licenciatura')">Submit</button>
+            </div>
+     </div>
+    </div>
+    <div class="col-8 col-md-4">
+     <div class="panel panel-info">
+            <div class="panel-heading">
+                <p>Mestrado: </p>
+            </div>
+            <div class="panel-body" style="text-align:center">
+                {{senhas.mestrado}}
+            </div>
+            <div class="panel-footer">
+               <button class="btn btn-primary" (click)="incrementaSenha('mestrado')">Submit</button>
+            </div>
+     </div>
+    </div>
+    <div class="col-8 col-md-4">
+     <div class="panel panel-info">
+            <div class="panel-heading">
+                <p>Doutoramento: </p>
+            </div>
+            <div class="panel-body" style="text-align:center">
+                {{senhas.doutoramento}}
+            </div>
+            <div class="panel-footer">
+               <button class="btn btn-primary" (click)="incrementaSenha('doutoramento')">Submit</button>
+            </div>
+     </div>
+    </div>
+    <div class="col-8 col-md-4">
+     <div class="panel panel-info">
+            <div class="panel-heading">
+                <p>Pagamento de Propinas: </p>
+            </div>
+            <div class="panel-body" style="text-align:center">
+                {{senhas.pagamentoPropinas}}
+            </div>
+            <div class="panel-footer">
+               <button class="btn btn-primary" (click)="incrementaSenha('pagamentoPropinas')">Submit</button>
+            </div>
+     </div>
+    </div>
+    <div class="col-8 col-md-4">
+     <div class="panel panel-info">
+            <div class="panel-heading">
+                <p>Tesouraria: </p>
+            </div>
+            <div class="panel-body" style="text-align:center">
+                {{senhas.tesouraria}}
+            </div>
+            <div class="panel-footer">
+               <button class="btn btn-primary" (click)="incrementaSenha('tesouraria')">Submit</button>
+            </div>
+     </div>
+    </div>
+    <div class="col-8 col-md-4">
+     
+            <div>
+               <button class="btn btn-primary" (click)="clearSenha()">Clear</button>
+            </div>
+     
+    </div>
+</div>

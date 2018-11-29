@@ -1,0 +1,32 @@
+<div class="col-md-8 col-md-offset-2"> 
+	<form [formGroup]="myForm" (ngSubmit)="onSubmit()"> 
+		<div class="form-group"> 
+			<label for="fullName">Nome Completo</label> 
+			<input type="text" id="fullName" class="form-control" formControlName="fullName"> 
+		</div> 
+		<div class="form-group"> 
+			<label for="userNumero">Numero de aluno</label> 
+			<input type="text" id="userNumero" class="form-control" formControlName="userNumero"> 
+		</div> 
+		<div class="form-group"> 
+			<label for="userCurso">Curso</label>
+			<select name="userCurso" class="form-control" formControlName="userCurso">
+				<option value="LEI" >Licenciatura em Engenharia Informática</option>
+				<option value="LTIC">Licenciatura em Tecnologias da Informação</option>
+			</select>
+		</div> 
+		<div class="form-group"> 
+			<label for="userNif">Numero Fiscal</label> 
+			<input type="text" id="userNif" class="form-control" formControlName="userNif"> 
+		</div>
+		<div class="form-group">
+			<label for="email">E-Mail</label>
+			<input type="email" id="email" class="form-control" formControlName="email" placeholder="fcxxxx@alunos.fc.ul.pt">
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" id="password" class="form-control" formControlName="password">
+		</div>
+		<button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Submit</button> 
+	</form> 
+</div>

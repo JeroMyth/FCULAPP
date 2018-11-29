@@ -1,0 +1,46 @@
+<h2 highlight>Matricula</h2>
+<div class="col-md-8 col-md-offset-2" *ngIf="exist">
+        <h4>
+            <p> O aluno {{user.userNumero}} já está inscrito no presente ano-lectivo. </p>
+            <p> Para mais informações : info@fc.ul.pt </p>
+            <p> Para recolher a facturação da presente inscrição dirigir-se à opção "Fatura da Inscrição". </p>
+        </h4>
+</div>
+<div class="col-md-8 col-md-offset-2" *ngIf="!exist" >
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.form)">
+        <div class="row" >
+                <div class="col-8 col-md-6">
+                    <h5 highlight>Unidade curricular</h5>
+                </div>
+                <div class="col-2 col-md-2">
+                    <h5 highlight>Semestre</h5>
+                </div>
+                <div class="col-2 col-md-2">
+                    <h5 highlight>Ano</h5>
+                </div>
+                <div class="col-2 col-md-2">
+                    
+                </div>
+            </div>
+        <div class="form-check">
+         <div *ngFor='let unidade of unidades | async ; let i=index'>
+          <div class="row" >
+           <div class="col-8 col-md-6">
+                <label class="form-check-label" for="{{unidade.nome}}"> {{unidade.nome}} </label>
+            </div>
+           <div class="col-2 col-md-2">
+                    {{unidade.semestre}}º
+            </div>
+           <div class="col-2 col-md-2">
+                    {{unidade.ano}}º
+            </div>
+            <div class="col-2 col-md-2">
+                    <input class="form-check-input" type="checkbox" id={{unidade.nome}} name="{{i + 1}}" [ngModel]="''">
+            </div>
+          </div>
+            <br>
+         </div>
+        </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
