@@ -7,16 +7,16 @@ Pré-Requesitos:
 - Any Browser
 
 ## WARNING ##
-Esta App foi desenvolvida e testada num ambiente de desenvolvimento Windows para ambientes baseados em Linux ou MacOS se necessario vistitar os links referidos.
+Esta App foi desenvolvida e testada num ambiente de desenvolvimento Windows para ambientes baseados em Linux ou MacOS será necessario visitar os links referidos.
 
 Neste projecto está a ser utilizado a API Angular2.
 
 ## Tutorial ##
 
-#### SETUP DO NODE.JS:
+### Setup do Node.JS:
 Abrir terminal NODE.JS e navegar até ao directório root do projecto.
 
-######Instalar o npm e as dependencias que o projecto utiliza.
+###### Instalar o npm e as dependencias que o projecto utiliza.
 
 1. `>npm install`
 2. `>npm install --save mongoose`
@@ -25,14 +25,16 @@ Abrir terminal NODE.JS e navegar até ao directório root do projecto.
 5. `>npm install --sava jsonwebtoken`
 6. `>npm install moment --save`
 
-#### SETUP DO MongoDB ENVIRONMENT:
+### Setup do MongoDB Environment:
 
-##### Em ambiente Windows
+#### Em ambiente Windows
 
 ###### Criar a pasta de base de dados local para o MongoDB:
+
 Abrir o Command Prompt e executar o comando abaixo.
 
 `>md \data\db`
+
 
 ###### Arrancar o MongoDB:
 
@@ -44,6 +46,7 @@ Verificar que se o MongoDB iniciou correctamente analisando se o output no termi
 
 `>[initandlisten] waiting for connections on port 27017`
 
+
 ###### Conectar-se ao MongoDB:
 
 Executar o seguinte comando num Command Prompt
@@ -53,14 +56,15 @@ Executar o seguinte comando num Command Prompt
 
 ###### Em ambiente Linux e/ou MacOS visitar ## -> https://docs.mongodb.com/manual/administration/install-community/
 
-##### TROUBLESHOOTING DO MongoDB:
+### Troubleshooting do MongoDB:
 
-Se ao arrancar o MongoDB e ocorrer o erro com codigo 100->
+###### Se ao arrancar o MongoDB e ocorrer o erro com codigo 100->
 
 Navegar até à pasta \data\db e apagar o conteudo existente na pasta "db" ( o provavel é existir um bug nos ficheiros wireshark)
 
 
-#### PARA ARRANCAR A APLICAÇÃO WEB:
+### Para arrancar a aplicação Web:
+
 É necessario ter três terminais Node.js abertos e já navegados até ao root do projecto e correr os seguintes comandos na ordem pelo o qual os terminais estão nomiados (terminal 1, terminal 2 e terminal 3).
 
 ###### Node.Js terminal 1 (builder):
@@ -76,6 +80,7 @@ Navegar até à pasta \data\db e apagar o conteudo existente na pasta "db" ( o p
 ###### Node.Js terminal 3 (seeder):
 
 `>node seed/senha-seeder.js`
+
 `>node seed/unidades-seeder.js`
 
 ###### Output no browser
@@ -84,5 +89,5 @@ Após a aplicação ter sido construida(build) e ter sido arrancada(start) se a 
 `>localhost:3001`
 
 
-Create By João Manuel Jeromito
+Create By João JeroMyth
 
