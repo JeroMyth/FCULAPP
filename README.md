@@ -9,23 +9,21 @@ Pré-Requesitos:
 ## WARNING ##
 Esta App foi desenvolvida e testada num ambiente de desenvolvimento Windows para ambientes baseados em Linux ou MacOS será necessario visitar os links referidos.
 
-Neste projecto está a ser utilizado a API Angular2.
+Neste projecto é necessario utilizar o NodeJs com o gestor de package NPM.
 
 Necessario descompaquetar o node_modules.zip 
 
 ## Tutorial ##
 
+Após o download do NodeJs e do MongoDB Community Server e dos seus respectivos instalamentos, já se pode proceguir no tutorial.
+
 ### Setup do Node.JS:
-Abrir terminal NODE.JS e navegar até ao directório root do projecto.
+Abrir terminal NODE.JS.
 
-###### Instalar o npm e as dependencias que o projecto utiliza.
+###### E verificar a instalação correcta e a versão do nodejs e do gestor de package npm.
 
-1. `$ npm install`
-2. `$ npm install --save mongoose`
-3. `$ npm install -save mongoose-unique-validator`
-4. `$ npm install --save bcryptjs`
-5. `$ npm install --sava jsonwebtoken`
-6. `$ npm install moment --save`
+`$ node -v`
+`$ npm -v`
 
 ### Setup do MongoDB Environment:
 
