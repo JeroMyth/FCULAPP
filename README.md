@@ -23,6 +23,7 @@ Abrir terminal NODE.JS.
 ###### E verificar a instalação correcta e a versão do nodejs e do gestor de package npm.
 
 `$ node -v`
+
 `$ npm -v`
 
 ### Setup do MongoDB Environment:
